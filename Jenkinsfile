@@ -1,11 +1,8 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:lts-bullseye-slim' 
-            args '-p 3000:3000' 
-        }
-    }
-    stages {
+  agent any
+    
+  tools {nodejs "node"}
+  stages {
         stage('see') { 
             steps {
                 sh 'ls' 
