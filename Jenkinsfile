@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Front-end') {
             agent {
-                docker { image 'node:16.13.1-alpine' }
+                docker { image 'node:lts-buster-slim' }
             }
             steps {
                 sh 'node --version'
